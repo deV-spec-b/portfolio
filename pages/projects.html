@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Проекты - Портфолио</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>   
+<body>
+    <div class="page-container">
+        <header class="header">
+            <div class="logo">
+                <div class="logo-circle">IS</div>
+                <span class="logo-text">Portfolio</span>
+            </div>
+            <div class="student-name">Скоробагатько Иван</div>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
+                    <li class="nav-item"><a class="nav-link" href="diary.html">Дневник</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="projects.html">Проекты</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="content">
+            <div class="projects-header">
+                <h1>Мои проекты</h1>
+                <div class="projects-filters">
+                    <button class="filter-btn active" data-filter="all">Все</button>
+                    <button class="filter-btn" data-filter="html">HTML</button>
+                    <button class="filter-btn" data-filter="js">JS</button>
+                    <button class="filter-btn" data-filter="react">React</button>
+                </div>
+            </div>
+
+            <div class="projects-page-grid">
+                <div class="project-page-card" data-category="html" onclick="openModal('modal1')">
+                    <div class="project-page-content">
+                        <h3 class="project-page-title">Личный сайт</h3>
+                        <p class="project-page-tech">HTML, CSS</p>
+                    </div>
+                </div>
+                <div class="project-page-card" data-category="js" onclick="openModal('modal2')">
+                    <div class="project-page-content">
+                        <h3 class="project-page-title">Todo-приложение</h3>
+                        <p class="project-page-tech">JavaScript</p>
+                    </div>
+                </div>
+
+                <div class="project-page-card" data-category="react" onclick="openModal('modal3')">
+                    <div class="project-page-content">
+                        <h3 class="project-page-title">Интернет-магазин</h3>
+                        <p class="project-page-tech">React</p>
+                    </div>
+                </div>
+
+                <div class="project-page-card" data-category="html" onclick="openModal('modal4')">
+                    <div class="project-page-content">
+                        <h3 class="project-page-title">Портфолио</h3>
+                        <p class="project-page-tech">Bootstrap</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>© 2025 Контакты</p>
+        </footer>
+    </div>
+
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal1')">&times;</span>
+            <h2>Личный сайт</h2>
+            <div class="modal-body">
+                <div class="project-screenshots">
+                    <img src="../images/project1-1.png" alt="Скриншот личного сайта 1" class="screenshot">
+                    <img src="../images/project1-2.png" alt="Скриншот личного сайта 2" class="screenshot">
+                </div>
+                <div class="project-info">
+                    <h3>Описание проекта</h3>
+                    <p>Персональный сайт-визитка с информацией о себе, навыках и контактами. Адаптивный дизайн, современная верстка.</p>
+                    
+                    <h3>Технологии</h3>
+                    <ul>
+                        <li>HTML5</li>
+                        <li>CSS3 (Flexbox/Grid)</li>
+                        <li>JavaScript (базовый)</li>
+                        <li>Адаптивный дизайн</li>
+                    </ul>
+                    
+                    <h3>Ссылки</h3>
+                    <div class="project-links">
+                        <a href="https://example.com" target="_blank" class="project-link">Живая версия</a>
+                        <a href="https://github.com/username/project1" target="_blank" class="project-link">Исходный код</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal2')">&times;</span>
+            <h2>Todo-приложение</h2>
+            <div class="modal-body">
+                <div class="project-screenshots">
+                    <img src="../images/project2-1.png" alt="Скриншот Todo-приложения 1" class="screenshot">
+                    <img src="../images/project2-2.png" alt="Скриншот Todo-приложения 2" class="screenshot">
+                </div>
+                <div class="project-info">
+                    <h3>Описание проекта</h3>
+                    <p>Интерактивное приложение для управления задачами с возможностью добавления, удаления и отметки выполненных задач.</p>
+                    
+                    <h3>Технологии</h3>
+                    <ul>
+                        <li>JavaScript ES6+</li>
+                        <li>Local Storage</li>
+                        <li>DOM Manipulation</li>
+                        <li>CSS анимации</li>
+                    </ul>
+                    
+                    <h3>Функциональность</h3>
+                    <ul>
+                        <li>Добавление/удаление задач</li>
+                        <li>Отметка выполненных</li>
+                        <li>Фильтрация задач</li>
+                        <li>Сохранение в браузере</li>
+                    </ul>
+                    
+                    <h3>Ссылки</h3>
+                    <div class="project-links">
+                        <a href="https://example.com/todo" target="_blank" class="project-link">Живая версия</a>
+                        <a href="https://github.com/username/todo-app" target="_blank" class="project-link">Исходный код</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal3')">&times;</span>
+            <h2>Интернет-магазин</h2>
+            <div class="modal-body">
+                <div class="project-screenshots">
+                    <img src="../images/project3-1.webp" alt="Скриншот магазина 1" class="screenshot">
+                    <img src="../images/project3-2.webp" alt="Скриншот магазина 2" class="screenshot">
+                </div>
+                <div class="project-info">
+                    <h3>Описание проекта</h3>
+                    <p>Полнофункциональный интернет-магазин с каталогом товаров, корзиной покупок и системой фильтрации.</p>
+                    
+                    <h3>Технологии</h3>
+                    <ul>
+                        <li>React</li>
+                        <li>React Router</li>
+                        <li>Context API</li>
+                        <li>CSS Modules</li>
+                    </ul>
+                    
+                    <h3>Функциональность</h3>
+                    <ul>
+                        <li>Каталог товаров</li>
+                        <li>Корзина покупок</li>
+                        <li>Фильтрация и поиск</li>
+                        <li>Адаптивный дизайн</li>
+                    </ul>
+                    
+                    <h3>Ссылки</h3>
+                    <div class="project-links">
+                        <a href="https://example.com/shop" target="_blank" class="project-link">Живая версия</a>
+                        <a href="https://github.com/username/react-shop" target="_blank" class="project-link">Исходный код</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal4" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal4')">&times;</span>
+            <h2>Портфолио</h2>
+            <div class="modal-body">
+                <div class="project-screenshots">
+                    <img src="../images/project4-1.png" alt="Скриншот портфолио 1" class="screenshot">
+                    <img src="../images/project4-2.png" alt="Скриншот портфолио 2" class="screenshot">
+                </div>
+                <div class="project-info">
+                    <h3>Описание проекта</h3>
+                    <p>Современное адаптивное портфолио с использованием Bootstrap 5. Включает все основные разделы и проекты.</p>
+                    
+                    <h3>Технологии</h3>
+                    <ul>
+                        <li>Bootstrap 5</li>
+                        <li>JavaScript</li>
+                        <li>SCSS</li>
+                        <li>Gulp</li>
+                    </ul>
+                    
+                    <h3>Особенности</h3>
+                    <ul>
+                        <li>Полностью адаптивный дизайн</li>
+                        <li>Оптимизация производительности</li>
+                        <li>Кроссбраузерная совместимость</li>
+                        <li>SEO-оптимизация</li>
+                    </ul>
+                    
+                    <h3>Ссылки</h3>
+                    <div class="project-links">
+                        <a href="https://example.com/portfolio" target="_blank" class="project-link">Живая версия</a>
+                        <a href="https://github.com/username/portfolio" target="_blank" class="project-link">Исходный код</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../scripts/script.js"></script>
+</body>
+</html>
