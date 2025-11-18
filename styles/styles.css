@@ -173,8 +173,8 @@ body {
 
 .projects-grid {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+    gap: clamp(1rem, 2vw, 1.5rem);
 }
 
 .project-card {
@@ -270,6 +270,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    min-width: 0;
 }
 
 .project-page-card:hover {
@@ -286,6 +287,7 @@ body {
     font-weight: bold;
     margin-bottom: 12px;
     color: #333;
+    overflow-wrap: anywhere;
 }
 
 .project-page-tech {
@@ -296,6 +298,7 @@ body {
     border-radius: 15px;
     display: inline-block;
     font-weight: 500;
+    overflow-wrap: anywhere;
 }
 
 .diary-header {
@@ -311,8 +314,8 @@ body {
 
 .diary-content, .contacts-content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 350px), 1fr));
+    gap: clamp(1.5rem, 4vw, 3rem);
     align-items: start;
 }
 
@@ -539,7 +542,6 @@ body {
     font-size: 15px;
 }
 
-/* FOOTER */
 .footer {
     text-align: center;
     padding: 30px 0;
@@ -621,16 +623,19 @@ body {
 }
 
 .project-screenshots {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 15px;
     margin-bottom: 25px;
 }
 
 .screenshot {
+    max-width: 600px;
     width: 100%;
-    height: 200px;
-    object-fit: cover;
+    height: auto;
+    max-height: 400px;
+    object-fit: contain;
     border-radius: 8px;
     border: 2px solid #e9ecef;
     background: #f8f9fa;
@@ -730,7 +735,12 @@ body {
         padding: 25px 20px;
     }
     
-    .project-screenshots, .project-links {
+    .project-screenshots {
+        display: flex;
+        justify-content: center;
+    }
+
+    .project-links {
         grid-template-columns: 1fr;
         flex-direction: column;
     }
@@ -796,4 +806,83 @@ a.download-btn:hover {
     box-shadow: 0 6px 15px rgba(0, 123, 255, 0.4);
     color: white;
     text-decoration: none;
+}
+
+.skip-link{
+    position: absolute;
+    inset-inline-start: 1rem;
+    inset-block-start: -100%;
+    z-index: 10000;
+    padding: .5rem .75rem;
+    background: #111;
+    color: #fff;
+    border-radius: .5rem;
+    text-decoration: none;
+}
+
+.skip-link:focus,
+.skip-link:focus-visible { 
+    inset-block-start: 1rem; 
+}
+
+:focus-visible { 
+    outline: 3px solid #2563eb; 
+    outline-offset: 2px; 
+}
+
+a, button, input, textarea { 
+    outline-offset: 2px; 
+}
+
+@media (pointer: coarse){
+    a, button, .nav-link { 
+        min-height: 44px; 
+        padding: .75rem 1rem; 
+    }
+}
+
+.filter-btn[aria-pressed="true"] {
+    background: #007bff;
+    color: white;
+}
+
+.visually-hidden {
+    position: absolute !important;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.error-message:not(.visually-hidden) {
+    display: block !important;
+    position: static !important;
+    width: auto !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+    clip: auto !important;
+    white-space: normal !important;
+}
+
+.form-group input:invalid,
+.form-group textarea:invalid {
+    border-color: #dc2626;
+    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+}
+
+.form-group input:valid,
+.form-group textarea:valid {
+    border-color: #16a34a;
+}
+
+.form-group:has(.error-message:not(.visually-hidden)) input,
+.form-group:has(.error-message:not(.visually-hidden)) textarea {
+    border-color: #dc2626;
+    background-color: #fef2f2;
 }

@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../styles/styles.css">
 </head>   
 <body>
+    <a class="skip-link" href="#main">Перейти к основному содержимому</a>
     <div class="page-container">
         <header class="header">
             <div class="logo">
@@ -24,7 +25,7 @@
             </nav>
         </header>
 
-        <main class="content">
+        <main id="main" class="content">
             <div class="diary-header">
                 <h1>Мой учебный прогресс</h1>
             </div>
@@ -102,8 +103,8 @@
                         </div>
                     </div>
 
-                    <button class="add-btn">
-                        <span class="btn-icon">+</span>
+                    <button class="add-btn" aria-label="Добавить новую запись в дневник">
+                        <span class="btn-icon" aria-hidden="true">+</span>
                         Добавить запись
                     </button>
                 </div>

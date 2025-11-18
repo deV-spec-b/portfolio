@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles/styles.css">
 </head>   
 <body>
+    <a class="skip-link" href="#main">Перейти к основному содержимому</a> 
     <div class="page-container">
         <header class="header">
             <div class="logo">
@@ -14,9 +15,9 @@
                 <span class="logo-text">Portfolio</span>
             </div>
             <div class="student-name">Скоробагатько Иван</div>
-            <nav class="nav">
+            <nav class="nav" aria-label="Основная навигация">
                 <ul class="nav-list">
-                    <li class="nav-item"><a class="nav-link active" href="index.html">Главная</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="index.html" aria-current="page">Главная</a></li>
                     <li class="nav-item"><a class="nav-link" href="pages/diary.html">Дневник</a></li>
                     <li class="nav-item"><a class="nav-link" href="pages/projects.html">Проекты</a></li>
                     <li class="nav-item"><a class="nav-link" href="pages/contacts.html">Контакты</a></li>
@@ -24,10 +25,19 @@
             </nav>
         </header>
 
-        <main class="content">
+        <main id="main" class="content">
             <div class="profile-section">
                 <figure class="hero__image">
-                    <img class="profile-photo" src="images/student-photo.webp" alt="Портрет студента">
+                    <img class="profile-photo"
+                        src="images/student-photo.webp"
+                        srcset="images/student-photo-150.webp 150w,
+                                images/student-photo-200.webp 200w,
+                                images/student-photo-300.webp 300w"
+                        sizes="(max-width: 768px) 150px, 200px"
+                        width="200" height="200"
+                        alt="Портрет студента"
+                        loading="eager"
+                        fetchpriority="high">
                 </figure>
 
                 <div class="intro-text">

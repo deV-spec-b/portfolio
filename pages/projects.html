@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="../styles/styles.css">
 </head>   
 <body>
+
+    <a class="skip-link" href="#main">Перейти к основному содержимому</a>
     <div class="page-container">
         <header class="header">
             <div class="logo">
@@ -24,14 +26,14 @@
             </nav>
         </header>
 
-        <main class="content">
+        <main id="main" class="content">
             <div class="projects-header">
                 <h1>Мои проекты</h1>
-                <div class="projects-filters">
-                    <button class="filter-btn active" data-filter="all">Все</button>
-                    <button class="filter-btn" data-filter="html">HTML</button>
-                    <button class="filter-btn" data-filter="js">JS</button>
-                    <button class="filter-btn" data-filter="react">React</button>
+                <div class="projects-filters" role="group" aria-label="Фильтры проектов">
+                    <button class="filter-btn active" data-filter="all" aria-pressed="true">Все</button>
+                    <button class="filter-btn" data-filter="html" aria-pressed="false">HTML</button>
+                    <button class="filter-btn" data-filter="js" aria-pressed="false">JS</button>
+                    <button class="filter-btn" data-filter="react" aria-pressed="false">React</button>
                 </div>
             </div>
 
@@ -76,8 +78,20 @@
             <h2>Личный сайт</h2>
             <div class="modal-body">
                 <div class="project-screenshots">
-                    <img src="../images/project1-1.png" alt="Скриншот личного сайта 1" class="screenshot">
-                    <img src="../images/project1-2.png" alt="Скриншот личного сайта 2" class="screenshot">
+
+                    <img class="screenshot"
+                        src="../images/project1-1.png"
+                        srcset="../images/project1-1-300.jpg 300w,
+                                ../images/project1-1-500.jpg 500w,
+                                ../images/project1-1-700.jpg 700w"
+                        sizes="(max-width: 600px) 100vw,
+                                (max-width: 912px) 50vw,
+                                (max-width: 1224px) 33vw,
+                                25vw"
+                        width="500" height="375"
+                        alt="Скриншот личного сайта 1"
+                        loading="lazy">
+
                 </div>
                 <div class="project-info">
                     <h3>Описание проекта</h3>
@@ -107,8 +121,20 @@
             <h2>Todo-приложение</h2>
             <div class="modal-body">
                 <div class="project-screenshots">
-                    <img src="../images/project2-1.png" alt="Скриншот Todo-приложения 1" class="screenshot">
-                    <img src="../images/project2-2.png" alt="Скриншот Todo-приложения 2" class="screenshot">
+
+                    <img class="screenshot"
+                        src="../images/project2-1.png"
+                        srcset="../images/project2-1-300.jpg 300w,
+                                ../images/project2-1-500.jpg 500w,
+                                ../images/project2-1-700.jpg 700w"
+                        sizes="(max-width: 600px) 100vw,
+                                (max-width: 912px) 50vw,
+                                (max-width: 1224px) 33vw,
+                                25vw"
+                        width="500" height="375"
+                        alt="Скриншот Todo-приложения"
+                        loading="lazy">
+
                 </div>
                 <div class="project-info">
                     <h3>Описание проекта</h3>
@@ -146,8 +172,20 @@
             <h2>Интернет-магазин</h2>
             <div class="modal-body">
                 <div class="project-screenshots">
-                    <img src="../images/project3-1.webp" alt="Скриншот магазина 1" class="screenshot">
-                    <img src="../images/project3-2.webp" alt="Скриншот магазина 2" class="screenshot">
+
+                    <img class="screenshot"
+                        src="../images/project3-1.png"
+                        srcset="../images/project3-1-300.jpg 300w,
+                                ../images/project3-1-500.jpg 500w,
+                                ../images/project3-1-700.jpg 700w"
+                        sizes="(max-width: 600px) 100vw,
+                                (max-width: 912px) 50vw,
+                                (max-width: 1224px) 33vw,
+                                25vw"
+                        width="500" height="375"
+                        alt="Скриншот магазина"
+                        loading="lazy">
+
                 </div>
                 <div class="project-info">
                     <h3>Описание проекта</h3>
@@ -185,8 +223,20 @@
             <h2>Портфолио</h2>
             <div class="modal-body">
                 <div class="project-screenshots">
-                    <img src="../images/project4-1.png" alt="Скриншот портфолио 1" class="screenshot">
-                    <img src="../images/project4-2.png" alt="Скриншот портфолио 2" class="screenshot">
+
+                    <img class="screenshot"
+                        src="../images/project4-1.png"
+                        srcset="../images/project4-1-300.jpg 300w,
+                                ../images/project4-1-500.jpg 500w,
+                                ../images/project4-1-700.jpg 700w"
+                        sizes="(max-width: 600px) 100vw,
+                                (max-width: 912px) 50vw,
+                                (max-width: 1224px) 33vw,
+                                25vw"
+                        width="500" height="375"
+                        alt="Скриншот портфолио"
+                        loading="lazy">
+
                 </div>
                 <div class="project-info">
                     <h3>Описание проекта</h3>
