@@ -26,6 +26,7 @@
         </header>
 
         <main id="main" class="content">
+            <h1 class="visually-hidden">Мое Портфолио</h1>
             <div class="profile-section">
                 <figure class="hero__image">
                     <img class="profile-photo"
@@ -43,59 +44,63 @@
                 <div class="intro-text">
                     <h2>Привет! Я студент группы ЭФБО-07-24</h2>
                     <p>Увлекаюсь веб-разработкой</p>
-                    <a href="assets/resume.pdf" download class="download-btn">Скачать резюме</a>
+                    <a href="assets/resume.pdf" download class="download-btn" aria-label="Скачать резюме">Скачать резюме</a>
                 </div>
             </div>
 
             <div class="main-grid">
                 <div class="skills-section">
                     <h3>Мои навыки</h3>
-                    <table class="skills-table">
-                        <tr>
-                            <th>Технология</th>
-                            <th>Уровень</th>
-                        </tr>
-                        <tr>
-                            <td>HTML/CSS</td>
-                            <td>80%</td>
-                        </tr>
-                        <tr>
-                            <td>JavaScript</td>
-                            <td>85%</td>
-                        </tr>
-                        <tr>
-                            <td>Bootstrap</td>
-                            <td>70%</td>
-                        </tr>
-                        <tr>
-                            <td>React</td>
-                            <td>65%</td>
-                        </tr>
+                    <table class="skills-table" aria-label="Навыки веб-разработки">
+                        <thead>
+                            <tr>
+                                <th scope="col">Технология</th>
+                                <th scope="col">Уровень</th>
+                            </tr>
+                        </thead>
+                        <tbody>   
+                            <tr>
+                                <td>HTML/CSS</td>
+                                <td>80%</td>
+                            </tr>
+                            <tr>
+                                <td>JavaScript</td>
+                                <td>85%</td>
+                            </tr>
+                            <tr>
+                                <td>Bootstrap</td>
+                                <td>70%</td>
+                            </tr>
+                            <tr>
+                                <td>React</td>
+                                <td>65%</td>
+                            </tr>
+                        </tbody>    
                     </table>
                 </div>
 
                 <div class="projects-preview">
                     <h3>Лучшие проекты</h3>
                     <div class="projects-grid">
-                        <div class="project-card">
+                        <div class="project-card" tabindex="0" role="button" aria-label="Личный сайт">
                             <div class="project-content">
                                 <h4 class="project-title">Личный сайт</h4>
                                 <p class="project-tech">HTML, CSS</p>
                             </div>
                         </div>
-                        <div class="project-card">
+                        <div class="project-card" tabindex="0" role="button" aria-label="Интернет-магазин">
                             <div class="project-content">
                                 <h4 class="project-title">Интернет-магазин</h4>
                                 <p class="project-tech">React</p>
                             </div>
                         </div>
-                        <div class="project-card">
+                        <div class="project-card" tabindex="0" role="button" aria-label="Портфолио">
                             <div class="project-content">
                                 <h4 class="project-title">Портфолио</h4>
                                 <p class="project-tech">Bootstrap</p>
                             </div>
                         </div>
-                        <div class="project-card">
+                        <div class="project-card" tabindex="0" role="button" aria-label="Todo-приложение">
                             <div class="project-content">
                                 <h4 class="project-title">Todo-приложение</h4>
                                 <p class="project-tech">JavaScript</p>

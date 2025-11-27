@@ -1,17 +1,11 @@
 function openModal(modalId) {
-    console.log('Пытаюсь открыть модалку:', modalId);
     const modal = document.getElementById(modalId);
     if (modal) {
         modal.style.display = 'block';
         document.body.style.overflow = 'hidden';
-        console.log('Модалка открыта!');
-    } else {
-        console.error('Модалка не найдена:', modalId);
-    }
 }
 
 function closeModal(modalId) {
-    console.log('Закрываю модалку:', modalId);
     const modal = document.getElementById(modalId);
     if (modal) {
         modal.style.display = 'none';
@@ -59,8 +53,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
-
-console.log('JavaScript загружен! Модалки должны работать.');
 
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -164,4 +156,5 @@ function hideError(id) {
     if (errorElement) {
         errorElement.classList.add('visually-hidden');
     }
+}
 }

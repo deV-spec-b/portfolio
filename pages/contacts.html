@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Мое Портфолио - Контакты">
     <title>Контакты - Портфолио</title>
     <link rel="stylesheet" href="../styles/styles.css">
 </head>   
@@ -15,27 +16,34 @@
                 <span class="logo-text">Portfolio</span>
             </div>
             <div class="student-name">Скоробагатько Иван</div>
-            <nav class="nav">
+            <nav class="nav" aria-label="Основная навигация">
                 <ul class="nav-list">
                     <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
                     <li class="nav-item"><a class="nav-link" href="diary.html">Дневник</a></li>
                     <li class="nav-item"><a class="nav-link" href="projects.html">Проекты</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="contacts.html">Контакты</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contacts.html" aria-current="page">Контакты</a></li>
                 </ul>
             </nav>
         </header>
 
         <main id="main" class="content">
+            <h1 class="visually-hidden">Контактная информация</h1>
             <div class="contacts-content">
                 <div class="contact-form-section">
                     <h2>Свяжитесь со мной</h2>
                     
-                    <form class="contact-form" id="contactForm">
+                    <form class="contact-form" id="contactForm" novalidate>
+                        <fieldset class="form-fieldset">
+                            <legend class="visually-hidden">Контактные данные</legend>
                         <div class="form-group">
-                            <label for="name">Имя:</label>
+                            <label for="name" class="form-label">
+                                Имя:
+                                <span class="required" aria-hidden="true">*</span>
+                                <span class="visually-hidden">обязательное поле</span> 
+                            </label>
                             <input type="text" id="name" name="name"
                                 placeholder="Введите ваше имя" 
-                                aria-describedby="name-hint"
+                                aria-describedby="name-hint name-error"
                                 required
                                 aria-required="true">
                             <small id="name-hint" class="visually-hidden">Укажите ваше полное имя</small>
@@ -43,7 +51,11 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="email">Email:</label>
+                            <label for="email" class="form-label">
+                                Email:
+                                <span class="required" aria-hidden="true">*</span>
+                                <span class="visually-hidden">обязательное поле</span>
+                            </label>
                             <input type="email" id="email" name="email" 
                                 placeholder="Введите ваш email" 
                                 aria-describedby="email-hint email-error"
@@ -54,7 +66,11 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="message">Сообщение:</label>
+                            <label for="message" class="form-label">
+                                Сообщение:
+                                <span class="required" aria-hidden="true">*</span>
+                                <span class="visually-hidden">обязательное поле</span>
+                            </label>
                             <textarea id="message" name="message" 
                                 placeholder="Введите ваше сообщение..." 
                                 rows="5" 
@@ -64,6 +80,7 @@
                             <small id="message-hint" class="visually-hidden">Опишите подробно ваш вопрос</small>
                             <span id="message-error" class="error-message visually-hidden" role="alert"></span>
                         </div>
+                        </fieldset>
 
                         <button type="submit" class="submit-btn" aria-label="Отправить сообщение">
                             Отправить сообщение
@@ -78,8 +95,9 @@
                         <div class="contact-item">
                             <img src="../images/icons/email.png" 
                             width="32" height="32" 
-                            alt="Email" 
-                            class="contact-icon-img">
+                            alt="" 
+                            class="contact-icon-img"
+                            aria-hidden="true">
                             <div class="contact-details">
                                 <strong>Email:</strong>
                                 <span>student@edu.ru</span>
@@ -89,8 +107,9 @@
                         <div class="contact-item">
                             <img src="../images/icons/github.png" 
                             width="32" height="32"
-                            alt="GitHub" 
-                            class="contact-icon-img">
+                            alt="" 
+                            class="contact-icon-img"
+                            aria-hidden="true">
                             <div class="contact-details">
                                 <strong>GitHub:</strong>
                                 <span>username</span>
@@ -100,8 +119,9 @@
                         <div class="contact-item">
                             <img src="../images/icons/placeholder.png" 
                             width="32" height="32"
-                            alt="Адрес" 
-                            class="contact-icon-img">
+                            alt="" 
+                            class="contact-icon-img"
+                            aria-hidden="true">
                             <div class="contact-details">
                                 <strong>Адрес:</strong>
                                 <span>Город, Страна</span>
